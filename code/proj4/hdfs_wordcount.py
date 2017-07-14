@@ -44,7 +44,7 @@ if __name__ == "__main__":
     counts = lines.flatMap(lambda line: line.split(" "))\
                   .map(lambda x: (x, 1))\
                   .reduceByKey(lambda a, b: a+b)
-    counts.pprint()
+    counts.print()
 
     ssc.start()
     ssc.awaitTermination()
